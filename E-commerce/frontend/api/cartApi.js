@@ -3,12 +3,12 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const cartApi = createApi({
   reducerPath: "cartApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/api/cart",
+    baseUrl: import.meta.env.VITE_URL || "http://localhost:3000",
   }),
   endpoints: (builder) => ({
     getCart: builder.query({
       query: ({ token }) => ({
-        url: "/",
+        url: "/api/cart",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -44,7 +44,7 @@ export const cartApi = createApi({
     }),
     sessionAddToCart: builder.mutation({
       query: ({token,cart}) => ({
-        url: "/sessionCart",
+        url: "/api/cart/sessionCart",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
