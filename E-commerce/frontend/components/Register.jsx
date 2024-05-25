@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useRegisterUserMutation } from "../api/authApi";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../components/Navigation";
+import toast, {Toaster} from 'react-hot-toast';
 
 export default function Register() {
   const [addNewUser] = useRegisterUserMutation();
@@ -17,10 +18,16 @@ export default function Register() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const results = addNewUser(form);
+    const results = await addNewUser(form);
+    console.log(results)
+    if(results.error) return toast.error(results.error.data.error, {
+      position: "top-right",
+    });
     // console.log(results);
     navigate("/users/me");
   };
@@ -73,6 +80,7 @@ export default function Register() {
           </label>
           <button>Submit</button>
         </form>
+        <Toaster />
       </div>
     </>
   );

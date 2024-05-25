@@ -21,7 +21,7 @@ export default function Account() {
           <h4>First Name: {users.firstname}</h4>
           <h4>Last Name: {users.lastname}</h4>
           <h4>Email: {users.email}</h4>
-          <h4>Password: {users.password}</h4>
+          {/* <h4>Password: {users.password}</h4> */}
           <button onClick={onEdit}>Edit</button>
         </div>
       )}

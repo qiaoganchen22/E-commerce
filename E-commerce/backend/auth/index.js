@@ -12,7 +12,7 @@ router.post("/register", async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     if (!firstname || !lastname) {
-      return res.status(401).send("Please enter your name.");
+      return res.status(401).send({error:"Please enter your name."});
     }
 
     const isValidEmail = (email) => {
@@ -21,11 +21,11 @@ router.post("/register", async (req, res, next) => {
     };
 
     if (!isValidEmail(email)) {
-      return res.status(401).send("Invalid email address.");
+      return res.status(401).send({error:"Invalid email address."});
     }
 
     if (password.length < 7) {
-      return res.status(401).send("password must be at least 7 characters.");
+      return res.status(401).send({error:"password must be at least 7 characters."});
     }
 
     const user = await prisma.users.create({
@@ -57,7 +57,7 @@ router.post("/login", async (req, res, next) => {
       },
     });
 
-    if (user.email !== req.body.email)
+    if (user?.email !== req.body.email)
       return res.status(401).send("Invalid login credentials");
     const match = await bcrypt.compare(req.body.password, user?.password);
 

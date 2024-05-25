@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useAddToCartMutation } from "../api/cartApi";
 import img from "../src/assets/white_cart.jpg";
+import toast, {Toaster} from 'react-hot-toast';
 
 const AllProduct = () => {
   const { data: products, error, isLoading } = useGetProductsQuery();
@@ -96,9 +97,13 @@ const AllProduct = () => {
                 style={{ height: "50px", width: "50px" }}
                 onClick={(e) => {
                   //guest user? save to session
+                  toast.success("Added To Cart!", {
+                    position: "top-right",
+                  });
                   return !token
                     ? cartSession(e)
                     : addToCart({ productid: Number(e.target.id), token });
+
                 }}
               />
               {/* <button
@@ -121,6 +126,7 @@ const AllProduct = () => {
           </div>
         ))}
       </div>
+      <Toaster />
     </div>
   );
 };
