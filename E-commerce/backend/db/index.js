@@ -145,7 +145,7 @@ const url = [
   "https://www.lifewire.com/thmb/Ib9NmsHdQ4q236zqBVxnsNYTIHA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/samsung-ha-ref-rf56k9540sr-family-hub-overview-5aa18f0e18ba010037c023a5.jpg",
   "https://m.media-amazon.com/images/I/715hODmRbzL._AC_UF894,1000_QL80_.jpg",
   "https://m.media-amazon.com/images/I/71HAxG5+DxL._AC_UF894,1000_QL80_.jpg",
-  "https://www.inyouths.com/cdn/shop/articles/smart_mirror_cover_e532b424-d58f-4311-a61d-d38e2c8ab050.jpg?v=1673751202",
+  "https://m.media-amazon.com/images/I/71iQmlEJwdL._AC_SL1500_.jpg",
   "https://m.media-amazon.com/images/I/71geIOeuw-L._AC_UF894,1000_QL80_.jpg",
   "https://i5.walmartimages.com/seo/Digital-Art-Tablet-TSV-6-x-10-Graphics-Drawing-Tablet-with-8192-Levels-Passive-Stylus-Fit-for-Drawing-E-Learning-Online-Classes_3a066736-603d-470f-9a6d-1b123ab57cd5.733b8681aa65efd895d17aba85f0611b.jpeg",
   "https://m.media-amazon.com/images/I/61AMF0NXoVL.jpg",

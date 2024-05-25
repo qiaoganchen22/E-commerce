@@ -20,7 +20,7 @@ CREATE TABLE "orders" (
 CREATE TABLE "products" (
     "id" SERIAL NOT NULL,
     "name" VARCHAR(255) NOT NULL,
-    "url" VARCHAR(255) NOT NULL,
+    "url" TEXT NOT NULL,
     "description" VARCHAR(255) NOT NULL,
     "price" DOUBLE PRECISION NOT NULL,
 
