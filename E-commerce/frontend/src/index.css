@@ -119,3 +119,42 @@ width:500px;
 .centera{
   text-align: center;
 }
+.regipage{
+  margin:auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 100px;
+  border: 1px solid white;
+  width:30vw;
+  border-radius: 25px;
+}
+.regi{
+  text-align: center;
+}
+.loginpage{
+  margin:auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 100px;
+  border: 1px solid white;
+  width:30vw;
+  border-radius: 25px;
+}
+.login{
+  text-align: center;
+}
+
+.regipage label{
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+
+.loginpage label{
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+.inputf {
+  margin-bottom: 0.5em;
+}

@@ -6,7 +6,6 @@ import Navigation from "../components/Navigation";
 import { useSessionAddToCartMutation } from "../api/cartApi";
 import toast, {Toaster} from 'react-hot-toast';
 
-
 export default function Login() {
   const [cart] = useSessionAddToCartMutation();
   const navigate = useNavigate();
@@ -47,16 +46,23 @@ export default function Login() {
   return (
     <>
       <Navigation></Navigation>
-      <div>
-        <h2>Login</h2>
+      <div className="loginpage">
+        <h2 className="login">Login</h2>
+        <hr/>
         <form onSubmit={onSubmit}>
+        <div className="inputf"> 
           <label>
-            Email: <input type="email" name="email" onChange={onChange}></input>
+            Email: 
           </label>
+          <input type="email" name="email" onChange={onChange}></input>
+          </div>
+          <div className="inputf"> 
           <label>
             Password:{" "}
-            <input type="password" name="password" onChange={onChange}></input>
           </label>
+          <input type="password" name="password" onChange={onChange}></input>
+          </div>
+          <br/>
           <button>Submit</button>
         </form>
         

@@ -35,21 +35,25 @@ export default function Register() {
   return (
     <>
       <Navigation></Navigation>
-      <div>
-        <h2>Register</h2>
+      <div className="regipage">
+        <h2 className="regi">Register</h2>
+        <hr/>
         <form onSubmit={onSubmit}>
-          <label>
-            First Name:
-            <input
+
+          <div className="inputf">
+          <label>First Name: </label>
+          <input
               type="text"
               name="firstname"
               placeholder="First Name"
               onChange={onChange}
               required
-            ></input>
-          </label>
+          ></input>
+          </div>
+          
+          <div className="inputf">
           <label>
-            Last Name:
+            Last Name: </label>
             <input
               type="text"
               name="lastname"
@@ -57,9 +61,11 @@ export default function Register() {
               onChange={onChange}
               required
             ></input>
-          </label>
+          </div>
+
+          <div className="inputf">
           <label>
-            Email:
+            Email: </label>
             <input
               type="email"
               name="email"
@@ -67,9 +73,11 @@ export default function Register() {
               onChange={onChange}
               required
             ></input>
-          </label>
+          </div>
+
+          <div className="inputf"> 
           <label>
-            Password:
+            Password: </label>
             <input
               type="password"
               name="password"
@@ -77,8 +85,10 @@ export default function Register() {
               onChange={onChange}
               required
             ></input>
-          </label>
-          <button>Submit</button>
+          </div>
+
+          <div><button>Submit</button></div>
+          
         </form>
         <Toaster />
       </div>
